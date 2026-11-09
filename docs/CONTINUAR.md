@@ -1,6 +1,6 @@
 # AYN Thor + ES-DE + RetroXam — guía de continuación
 
-Última actualización: **2026-11-09 10:0x** (hora local del PC).
+Última actualización: **2026-11-09 09:30** (hora local del PC).
 Este documento es el punto de entrada para cualquier IA o persona que retome el proyecto.
 Los detalles cronológicos están en `ESTADO.md`; la lista de trabajo, en `TAREAS.md`.
 

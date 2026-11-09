@@ -1203,3 +1203,12 @@ T-35/T-36: `logcat -b crash -d` vacio y `0` en los 7 `ra_watch.log*` (110 min de
 
 - El zip v27 se instalo en el gestor y se selecciono; Eden lo cargo desde `/data/data/dev.eden.eden_emulator/files/gpu_driver/libvulkan_freedreno.so` y reporto `turnip Mesa driver 26.99.99` (el meta del release dice 27.0.0-20261109-r2). A los ~0,4 s: `Fatal signal 6 ... VkPipelineBuild` en `CreateGraphicsPipeline`.
 - Tercer build de Turnip consecutivo que aborta (v25.3.0-R11, T30, v27). Con el driver Qualcomm 512.676.53 el mismo 30XX arranca y se mantiene (RSS 4,39 GB a los 2m28s). `driver_path=` queda vacio.
+
+## 2026-11-09 09:30 — Documentación publicada en el repo y hueco gamelist↔catálogo medido
+
+- Publicado en `servixam-max/retroxam-roms` rama `main`, commit **`532f54c`** (antes `8b7a87e`): `docs/CONTINUAR.md` (guía de continuación para otra IA), `docs/ESTADO.md`, `docs/TAREAS.md`, `docs/ESTADO-LOG.html`, `docs/TAREAS-LOG.html`, `tools/` (15 scripts) y un `README.md` con el índice. Verificado `git ls-remote` = `532f54c` y raw accesible (11.634 B).
+- Motivo: el proyecto local no es repo git; hasta ahora la bitácora sólo existía en el PC. Cualquier IA que reciba el repo tiene ahora el estado y el backlog sin depender de esta sesión.
+- Medición nueva de T-27 (36 gamelists vs 36 JSONL del catálogo): **3.456 entradas en gamelists / 5.496 fichas**. Mayores huecos: mame −792, nes −194, nds −164, fbneo −153, gba −124, ps3 −103, gc −92, snes −88, ps2 −50, psp −50, n64 −45, psx −31, gb −31, megadrive −30.
+- Tres sistemas con **más gamelist que catálogo** (entradas sin ficha, a revisar una a una): **cps1 +1 (37/36)**, **psvita +3 (12/9)**, **megacd +5 (77/72)**. El resto cuadra exacto (atomiswave, cps2, cps3, model2, model3, naomi2, neogeo, switch, wii, wiiu, xbox360).
+- Los negativos son juegos ofrecidos que aún no están descargados en la SD: no son un error del catálogo, son el trabajo pendiente (T-18/relleno).
+- Nota de operación: los cron jobs del proyecto (`Thor-30m-continuar`, `Thor-noche-pruebas` y el watcher del subagente) se eliminaron a petición del usuario; la lista de cron queda en 0 y no hay más ciclos automáticos.

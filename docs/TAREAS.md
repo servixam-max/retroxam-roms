@@ -593,3 +593,5 @@ Clasificados los `sin-ficha` de `device/logs/rom_integrity.tsv` contra las 5.493
 - Control con el driver Qualcomm: `driver_path=` vacio y mismo lanzamiento -> `Report: Driver: Qualcomm Technologies Inc. Adreno Vulkan Driver 512.676.53`, proceso vivo en `EmulationActivity` (RSS 4,39 GB a los 2m28s, sin lmkd). Driver del sistema restaurado; los zips T30 y v27 quedan en `files/gpu_drivers/` para futuros builds.
 - Conclusion: ningun Turnip probado en este Thor pasa `CreateGraphicsPipeline`. T-58 sigue abierto; la via estable para 30XX es el driver Qualcomm 512.676.53.
 - Nota: la linea `hook_android_dlopen_ext: loading default driver: vulkan.adreno.so` sale tambien cuando el driver activo es el de Qualcomm; la linea fiable es `Report: Driver: ...` (se pierde en los abortos porque el buffer del log no se vuelca).
+
+> **2026-11-09 09:30 — documentación publicada.** `docs/CONTINUAR.md`, `docs/ESTADO.md`, `docs/TAREAS.md`, los dos HTML y `tools/` están en `retroxam-roms@532f54c` (rama `main`). Para T-27 la medición vigente es 3.456 entradas en gamelists vs 5.496 fichas; los positivos son cps1 37/36, psvita 12/9 y megacd 77/72.
